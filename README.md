@@ -15,7 +15,7 @@
 ### Clone this repo
 
 ```
-git clone git@github.com:cf-platform-eng/isv-ci-workstation-config.git
+git clone https://github.com/cf-platform-eng/isv-ci-workstation-config.git
 ```
 
 ### Install [rcm](https://github.com/thoughtbot/rcm)
