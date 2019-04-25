@@ -1,0 +1,6 @@
+# copy to ~/.ssh/config.d/github
+
+Host github.com
+  UseKeychain yes
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_github

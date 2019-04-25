@@ -12,3 +12,13 @@ if ! grep --quiet "${INCLUDE_DIRECTIVE}" "${GITCONFIG}" 2> /dev/null; then
   ${INCLUDE_DIRECTIVE}
 EOF
 fi
+
+
+SSHCONFIG="${HOME}/.ssh/config"
+INCLUDE_DIRECTIVE='Include config.d/github'
+
+if ! grep --quiet "${INCLUDE_DIRECTIVE}" "${SSHCONFIG}" 2> /dev/null; then
+  cat << EOF >> "${SSHCONFIG}"
+${INCLUDE_DIRECTIVE}
+EOF
+fi
