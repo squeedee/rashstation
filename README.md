@@ -27,7 +27,7 @@ brew install thoughtbot/formulae/rcm
 ### Install the dotfiles
 
 ```
-RCRC="${HOME}/workspace/isv-ci-workstation-config/rcrc" rcup -v
+RCRC="${HOME}/workspace/isv-ci-workstation-config/dotfiles/rcrc" rcup -v
 ```
 
 ## Optional
@@ -49,9 +49,14 @@ git clone https://github.com/luan/nvim ~/.config/nvim && \
 ### Install a new key for github etc
 
 ```shell
-ssh-keygen -f ~/.ssh/id_rash_github #whatever name makes most sense to you
-ssh-add -k ~/.ssh/id_rash_github.pub
-ssh-keygen -y -f ~/.ssh/id_rash_github | pbcopy
+ssh-keygen -f ~/.ssh/id_github # this file is in the ssh config so don't use a different name unless you want to mess with dotfiles 
+ssh-add -K ~/.ssh/id_github.pub
+ssh-keygen -y -f ~/.ssh/id_github | pbcopy
 # Public key is in your buffer, paste it into github
 ```
+
+### Hand install apps
+* istat menu or similar (there's a cask but it doesn't install safely)
+* Goland, Pycharm
+* Zoom (sign in to the site through Okta)
 
