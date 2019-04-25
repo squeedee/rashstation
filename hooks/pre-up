@@ -3,7 +3,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 GITCONFIG="${HOME}/.gitconfig"
-INCLUDE_DIRECTIVE='path="~/workspace/dotfiles/git-include"'
+INCLUDE_DIRECTIVE='path="~/workspace/isv-ci-workstation-config/git-include"'
 
 if ! grep --quiet "${INCLUDE_DIRECTIVE}" "${GITCONFIG}" 2> /dev/null; then
   cat << EOF >> "${GITCONFIG}"
