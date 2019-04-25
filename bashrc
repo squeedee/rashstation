@@ -134,3 +134,6 @@ fi
 
 ## Direnv
 eval "$(direnv hook bash)"
+
+## FASD
+eval "$(fasd --init auto)"
