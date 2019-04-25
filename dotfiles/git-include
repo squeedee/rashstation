@@ -1,20 +1,31 @@
 [alias]
   ci = commit --verbose
+  br = branch
   co = checkout
   di = diff
-  lg = log --graph --decorate=short --pretty=\"format:[%Cred%h%Creset]%d %ar by %Cblue%an%Creset. %Cgreen%s%Creset\" --find-renames=50%
-  lw = log --decorate=short --graph --color-words -w --find-renames=50%
   st = status
   su = submodule update --init --recursive
+  lw = log --decorate=short --graph --color-words -w --find-renames=50%
+  flog = log --pretty=fuller --decorate
+  lg = log --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)an>%Creset'
+  lol = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
+  blog = log origin/master... --left-right
+  ctags = !.\"git/hooks/ctags\"
 
 [diff]
   wordRegex = [^=.,()[:space:]\"]+
 
 [color]
-  ui = auto
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    ui = auto
 
 [grep]
   lineNumber = true
+  default = simple
 
 [push]
   recurseSubmodules=check
@@ -22,5 +33,12 @@
 [url "git@github.com:"]
   pushInsteadOf = https://github.com/
 
+[apply]
+    whitespace = nowarn
+
 [core]
+  pager = less -FXRS -x2
   excludesfile = ~/.gitignore
+
+[format]
+    pretty = format:%h %C(yellow)%ci%Creset %Cgreen%an%Creset | %s
