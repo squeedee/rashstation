@@ -44,3 +44,14 @@ brew bundle --global
 git clone https://github.com/luan/nvim ~/.config/nvim && \
   pip3 install neovim
 ```
+
+
+### Install a new key for github etc
+
+```shell
+ssh-keygen -f ~/.ssh/id_rash_github #whatever name makes most sense to you
+ssh-add -k ~/.ssh/id_rash_github.pub
+ssh-keygen -y -f ~/.ssh/id_rash_github | pbcopy
+# Public key is in your buffer, paste it into github
+```
+
