@@ -1,1 +1,1 @@
-DOTFILES_DIRS="${HOME}/workspace/isv-ci-workstation-config/dotfiles"
+DOTFILES_DIRS="${HOME}/rashstation/dotfiles"
